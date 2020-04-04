@@ -1,92 +1,37 @@
-/**
- * First create an array of objects called data
- * Inititalize the data array with the given values
- * Individual object should have principal and time as keys
-*/
-const data = [
-    {"principal": 2500, "time": 1.8},
-    {"principal": 1000, "time": 5},
-    {"principal": 3000, "time": 1},
-    {"principal": 2000, "time": 3},
-]
+## Welcome to GitHub Pages
 
+You can use the [editor on GitHub](https://github.com/Ballerina20/Ballerina20.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
-/**
- * Write a function called interestCalculator
- * It takes an array as a single arguement
- * Return the applicable rate
-*/
-function interestCalculator (array) {
+Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-    // Declare the return array
-    let interestData = []
+### Markdown
 
-    // Iterate the given array argument
-    array.map(value => {
+Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-        //Declare and initialize rate to be 0
-        let rate = 0
+```markdown
+Syntax highlighted code block
 
-        //Apply the given conditions
+# Header 1
+## Header 2
+### Header 3
 
-        /**
-         * Condition 1
-         * pprincipal >= 2500 and
-         * 3 < time > 1 then
-         * rate = 3
-        */
-        if(value.principal >= 2500 && (value.time > 1 && value.time < 3)) {
-            rate = 3
-        }
+- Bulleted
+- List
 
-        /**
-         * Condition 2
-         * principal >= 2500 and
-         * time >= 3 then
-         * rate = 4
-        */
-        else if(value.principal >= 2500 && value.time >= 3) {
-            rate = 4
-        }
+1. Numbered
+2. List
 
-        /**
-         * Condition 3
-         * principal < 2500 or
-         * time <= 1 then
-         * rate = 2 
-        */
-        else if(value.principal < 2500 || value.time <= 1) {
-            rate = 2
-        }
-        
-        /**
-         * Default Condition
-         * rate = 1
-         */
-        else rate = 1
+**Bold** and _Italic_ and `Code` text
 
-        /**
-         * Interest Calculation
-         * interest = (principal * rate * time) / 100
-        */
-        let interest = (value.principal * rate * value.time) / 100
-        
-        // Add a new key rate and its corresponding value to the current object
-        value.rate = rate
+[Link](url) and ![Image](src)
+```
 
-        // Add a new key interest and its corresponding value to the current object
-        value.interest = interest
+For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-        // Push the current object to the return array
-        interestData.push(value)
-    })
+### Jekyll Themes
 
-    // Log the interestData array to console
-    console.log(interestData)
+Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Ballerina20/Ballerina20.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-    // return the interestData
-    return interestData
-}
+### Support or Contact
 
-// Call/execute the function and pass the created data array
-interestCalculator(data)
+Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
